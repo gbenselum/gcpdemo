@@ -1,6 +1,18 @@
 ---
-- hosts: all
-  become: true  
+- name: 'Deploy gcp vm'
+  hosts: localhost
+  connection: local
+  become: false
+  gather_facts: no
+
+  vars: 
+    gcp_project: " true-campus-327318 "
+    gcp_cred_kind: "serviceaccount"
+    gcp_cred_file: "/tmp/test-project.json"
+    gcp_region: "us-central1"
+    gcp_zone: "us-central1-a"
+  
+  
   tasks:
   - name: create a disk
     google.cloud.gcp_compute_disk:
