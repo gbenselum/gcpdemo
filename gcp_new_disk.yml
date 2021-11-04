@@ -7,7 +7,7 @@
   vars:
     gcp_project: "true-campus-327318"
     gcp_cred_kind: "serviceaccount"
-    gcp_cred_file: "./user.json"
+    gcp_cred_file: "~/user.json"
     gcp_region: "us-central1"
     gcp_zone: "us-central1-a"
  
